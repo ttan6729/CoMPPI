@@ -1,7 +1,7 @@
-# CoMPPI ( deep learning model for multi-label PPI prediction)
+# CoMPPI (deep learning model for multi-label PPI prediction)
 This repository contains an official implementation of CoMPPI and datasets used for evaluating multi-label PPI prediction model.
 ----
-## Environemnts
+## Environments
 - python3.11
 - torch2.0.1
 - keras2.13.1
@@ -42,9 +42,9 @@ options:
 ```
 ### Sample command for training and testing
 ```
+cd script
 # SHS27K, random scheme
 python3 main.py -m s1 -sf SHS27K.txt -itr 1 -o ../output/27k_r.txt -sv t -s t
-
 # SYS30K, use previous BFS partition
 python3 main.py -m s2 -i3 ../partition/30k_bfs.data -sf SYS30K.txt -itr 1 -o ../output/30k_bfs.txt -sv t -s t
 ```
