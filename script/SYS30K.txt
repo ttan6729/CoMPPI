@@ -1,0 +1,2 @@
+../dataset/SYS30k.seqs.tsv
+../dataset/SYS30k.txt

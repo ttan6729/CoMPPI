@@ -1,7 +1,10 @@
-ohup /usr/bin/time -v python3 main.py -m s3 -sf 27k.txt -itr 1 -o /home/user1/code/PPIKG/multiSet/CoMPPI/output/27k_bfs1.txt -sv t -s t &> ../output/27k_bfs1.out
+
+cd /home/user1/code/PPIKG/CoMPPI/script && source /home/user1/code/PPIKG/env/bin/activate
+nohup /usr/bin/time -v python3 main.py -m s3 -sf 27k.txt -itr 1 -o /home/user1/code/PPIKG/multiSet/CoMPPI/output/27k_bfs1.txt -sv t -s t &> ../output/27k_bfs1.out
 
 
-nohup /usr/bin/time -v python3 main.py -m s2 -i3 /home/user1/code/PPIKG/multiSet/o2/27k_bfs10.data -sf 27k.txt -itr 1 -o /home/user1/code/PPIKG/CoMPPI/output/27k_bfs10.txt -sv t -s t &> ../output/27k_bfs10.out &
+nohup /usr/bin/time -v python3 main.py -m s2 -i3 /home/user1/code/PPIKG/multiSet/o2/27k_bfs10.data -sf 27k.txt -itr 1 -o /home/user1/code/PPIKG/CoMPPI/output/27k_bfs10.txt -sv t -s t &> ../output/27k_bfs10.out 
 
+nohup /usr/bin/time -v python3 main.py -m s1 -sf SHS27k.txt -itr 1 -o ../output/27k_r.txt -sv t -s t &> ../output/27k_r.out &
+nohup /usr/bin/time -v python3 main.py -m s2 -i3 ../partition/27k_bfs.data -sf 27k.txt -itr 1 -o ../output/27k_bfs.txt -sv t -s t &> ../output/27k_bfs.out &
 
-nohup /usr/bin/time -v python3 main.py -m s2 -i3 /home/user1/code/PPIKG/multiSet/o2/27k_bfs10.data -sf 27k.txt -itr 1 -o /home/user1/code/PPIKG/CoMPPI/output/27k_bfs10.txt -sv t -s t &> ../output/27k_bfs10.out &

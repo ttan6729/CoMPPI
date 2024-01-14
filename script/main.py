@@ -220,12 +220,12 @@ def run(seqPath,relPath,args):
 
 def get_args_parser():
 	parser = argparse.ArgumentParser('PPIM',add_help=False)
-	parser.add_argument('-m',default='s',type=str,help='mode')
+	parser.add_argument('-m',default='s',type=str,help='mode, s1 for random scheme, s3 for bfs scheme, s4 for dfs schem, s2 for using existing paration')
 	parser.add_argument('-o',default='output.txt',type=str,help='output path, the suffix will be used as path for saveing model and data')
 	parser.add_argument('-sf', default=None,type=str,help='optional input, contains path for sequence and relation file')
 	parser.add_argument('-i1',default=None,type=str,help='sequence file')
 	parser.add_argument('-i2',default=None,type=str,help='relation file')
-	parser.add_argument('-i3',default=None,type=str,help='file path of test set indices (for mode s4)')
+	parser.add_argument('-i3',default=None,type=str,help='file path of test set indices (for mode s2)')
 	parser.add_argument('-e',default=100,type=int,help='epochs')
 	parser.add_argument('-b', default=256, type=int,help='batch size')
 	parser.add_argument('-s', default=False, type=str2bool,help='save the best mode')
@@ -264,9 +264,11 @@ if __name__ == "__main__":
 			args.i2 = f.readline().strip()
 
 	if args.sv:
-		args.sv = args.o.split('.')[0]
+		args.sv = args.o[0:args.o.rfind('.')]
 		args.rp = args.sv+'.pt'
 		os.system(f'rm -f {args.rp}')
+
+
 
 	# if os.path.exists(args.o) and args.o != 'output.txt':
 	# 	print(f'output file {args.o} already exist')
