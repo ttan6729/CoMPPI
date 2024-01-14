@@ -9,18 +9,19 @@ This repository contains an official implementation of CoMPPI and datasets used 
 - pandas2.0.3
 ----
 ### Usage
+```
 usage: PPIM [-h] [-m M] [-o O] [-sf SF] [-i1 I1] [-i2 I2] [-i3 I3] [-e E] [-b B] [-s S] [-PSSM PSSM]
             [-blastdb BLASTDB] [-d D] [-sv SV] [-itr ITR] [-co CO] [-dp DP] [-lr LR] [-beta1 BETA1] [-dm DM]
             [-mp MP] [-tp TP] [-rp RP] [-ab AB]
 
 options:
   -h, --help        show this help message and exit
-  -m M              mode
+  -m M              mode, s1 for random scheme, s3 for bfs scheme, s4 for dfs schem, s2 for using existing paration
   -o O              output path, the suffix will be used as path for saveing model and data
   -sf SF            optional input, contains path for sequence and relation file
   -i1 I1            sequence file
   -i2 I2            relation file
-  -i3 I3            file path of test set indices (for mode s4)
+  -i3 I3            file path of test set indices (for mode s2)
   -e E              epochs
   -b B              batch size
   -s S              save the best mode
@@ -38,4 +39,9 @@ options:
   -tp TP            the path of the test set that to be saved
   -rp RP            the result path for file
   -ab AB            ablation study
+```
+### Sample command for training and testing
+```
+
+```
 
