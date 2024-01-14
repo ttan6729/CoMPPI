@@ -46,6 +46,6 @@ options:
 python3 main.py -m s1 -sf SHS27K.txt -itr 1 -o ../output/27k_r.txt -sv t -s t
 
 # SYS30K, use previous BFS partition
-python3 main.py -m s2 -i3 ../partition/30k_bfs.data -sf SHS30K.txt -itr 1 -o ../output/30k_bfs.txt -sv t -s t
+python3 main.py -m s2 -i3 ../partition/30k_bfs.data -sf SYS30K.txt -itr 1 -o ../output/30k_bfs.txt -sv t -s t
 ```
 
