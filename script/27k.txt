@@ -1,0 +1,2 @@
+/home/user1/code/PPIKG/method/AFTGAN/data/protein.SHS27k.sequences.dictionary.tsv
+/home/user1/code/PPIKG/method/AFTGAN/data/protein.actions.SHS27k.STRING.txt
