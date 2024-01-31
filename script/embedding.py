@@ -25,7 +25,7 @@ from sklearn.feature_selection import mutual_info_classif
 # from keras.layers.pooling import MaxPooling1D, AveragePooling1D, GlobalAveragePooling1D
 # from keras.optimizers import Adam,  RMSprop
 
-amino_list = ['A','G','V','I','L','F','P','Y','M','T','S','H','N','Q','W','R','K','D','E','C' ,'U']
+amino_list = ['A','G','V','I','L','F','P','Y','M','T','S','H','N','Q','W','R','K','D','E','C']
 
 MAXLEN = 512
 
